@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>THE AIDOC — Documenting the AI Revolution</title>
+<meta name="description" content="$AIDOC on Solana. Documenting the AI Revolution. Every holder is a Documentarian.">
+<meta property="og:title" content="THE AIDOC — Documenting the AI Revolution">
+<meta property="og:description" content="Humanity is entering the AI age. The AI Doc is documenting that transition.">
+<meta property="og:image" content="avatar.jpg">
+<link rel="icon" href="avatar.jpg">
+<style>
+:root{--bg:#161D27;--panel:#1E2836;--line:#2E3C50;--cyan:#4FE8E2;--violet:#A78BFA;--text:#F4F7FA;--muted:#9AABBD}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:Calibri,"Segoe UI",system-ui,Arial,sans-serif;font-size:17px;line-height:1.55}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+nav{position:sticky;top:0;background:rgba(22,29,39,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:9}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:58px}
+.logo{font-family:Arial,sans-serif;font-weight:700;letter-spacing:.06em}
+nav ul{display:flex;gap:22px;list-style:none;font-size:14px;color:var(--muted)}
+nav ul a:hover{color:var(--cyan)}
+.label{font-family:Arial,sans-serif;font-size:12px;font-weight:700;letter-spacing:.3em;color:var(--cyan);text-transform:uppercase}
+h1,h2,h3{font-family:Arial,sans-serif;line-height:1.15}
+.hero{padding:64px 0 72px}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+h1{font-size:clamp(44px,8vw,76px);margin:14px 0 10px}
+.tag{font-family:Arial,sans-serif;font-size:clamp(20px,3vw,26px);color:var(--cyan);margin-bottom:8px}
+.sub{color:var(--muted);font-style:italic;margin-bottom:22px}
+.hero p.copy{font-size:19px;margin-bottom:26px}
+.hero p.copy b{color:var(--cyan)}
+.hero img{width:100%;max-width:440px;justify-self:center;border-radius:50%;box-shadow:0 0 80px rgba(79,232,226,.18),0 0 90px rgba(167,139,250,.14)}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{font-family:Arial,sans-serif;font-weight:700;font-size:14px;letter-spacing:.06em;padding:13px 22px;border-radius:999px;border:1px solid var(--cyan);color:var(--text)}
+.btn.fill{background:var(--cyan);color:#0d141c}
+.btn.alt{border-color:var(--violet)}
+.btn:hover{transform:translateY(-1px)}
+section{padding:64px 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(30px,5vw,42px);margin:10px 0 28px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:26px}
+.card .n{font-family:Arial,sans-serif;font-weight:700;font-size:12px;letter-spacing:.25em;color:var(--cyan)}
+.card:nth-child(even) .n{color:var(--violet)}
+.card h3{font-size:21px;margin:10px 0 6px}
+.card .q{color:var(--muted);font-style:italic;margin-bottom:12px}
+.card ul{list-style:none}
+.card li{padding-left:18px;position:relative;margin:5px 0;font-size:16px}
+.card li:before{content:"";position:absolute;left:0;top:.7em;width:6px;height:6px;background:var(--cyan);border-radius:1px}
+.card .ms{margin-top:14px;padding-top:12px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+.card .ms b{color:var(--text)}
+.mission{text-align:center;max-width:760px;margin:0 auto}
+.mission h2{font-size:clamp(26px,4.5vw,38px)}
+.mission h2 span{color:var(--cyan)}
+.mission p{color:var(--muted);font-style:italic;font-size:19px;margin-bottom:14px}
+.mission strong{font-family:Arial,sans-serif}
+.ca{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px 22px;margin-bottom:18px}
+.ca code{font-family:Consolas,"Courier New",monospace;font-size:15px;word-break:break-all;flex:1 1 300px}
+.ca button{font-family:Arial,sans-serif;font-weight:700;font-size:13px;letter-spacing:.06em;background:transparent;color:var(--cyan);border:1px solid var(--cyan);border-radius:999px;padding:10px 20px;cursor:pointer}
+.links{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.links a{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px;text-align:center;font-family:Arial,sans-serif;font-weight:700;font-size:14px;letter-spacing:.08em}
+.links a:hover{border-color:var(--cyan);color:var(--cyan)}
+footer{border-top:1px solid var(--line);padding:30px 0;text-align:center;color:var(--muted);font-size:13px;letter-spacing:.15em}
+.risk{max-width:760px;margin:10px auto 0;font-size:12px;letter-spacing:0;color:#6f8093}
+@media(max-width:820px){.hero .wrap{grid-template-columns:1fr}.hero img{order:-1;max-width:300px}.grid{grid-template-columns:1fr}.links{grid-template-columns:1fr 1fr}nav ul{display:none}}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><a class="logo" href="#top">THE AIDOC</a>
+<ul><li><a href="#roadmap">Roadmap</a></li><li><a href="#mission">Mission</a></li><li><a href="#join">Join</a></li></ul></div></nav>
+
+<header class="hero" id="top"><div class="wrap">
+<div>
+<div class="label">$AIDOC &nbsp;•&nbsp; Solana</div>
+<h1>THE AIDOC</h1>
+<div class="tag">Documenting the AI Revolution</div>
+<div class="sub">Powered by Artificial Intelligence</div>
+<p class="copy">Humanity is entering the AI age.<br>The AI Doc is documenting that transition.<br><b>Every holder is a Documentarian.</b></p>
+<div class="btns">
+<a class="btn fill" href="https://pump.fun/coin/EBc6YWysUJsQJh9UayAiyS5j9voLdJUAVQBxzBNtpump" target="_blank" rel="noopener">BUY $AIDOC</a>
+<a class="btn" href="https://dexscreener.com/solana/EBc6YWysUJsQJh9UayAiyS5j9voLdJUAVQBxzBNtpump" target="_blank" rel="noopener">CHART</a>
+<a class="btn alt" href="https://t.me/aidocumentary1" target="_blank" rel="noopener">JOIN TELEGRAM</a>
+</div></div>
+<img src="avatar.jpg" alt="THE AIDOC emblem">
+</div></header>
+
+<section id="roadmap"><div class="wrap">
+<div class="label">The Documentary Roadmap</div>
+<h2>Six Chapters. One Story.</h2>
+<div class="grid">
+
+<div class="card"><div class="n">CHAPTER I</div><h3>The Discovery</h3><div class="q">"Launch, build awareness, and assemble the Documentarians."</div>
+<ul><li>Launch $AIDOC on Solana</li><li>Official website live</li><li>Visual identity rollout</li><li>Community formation</li><li>Establish Documentarians</li><li>X / Twitter &amp; Telegram expansion</li><li>Brand awareness campaign</li><li>First KOL collaborations</li><li>Documentary-style marketing</li><li>1,000+ holders</li><li>Trending campaigns</li><li>Community contests &amp; rewards</li></ul>
+<div class="ms"><b>Milestone:</b> 1,000+ Holders • First Major KOL Collaborations • Trending Campaigns</div></div>
+
+<div class="card"><div class="n">CHAPTER II</div><h3>The Investigation</h3><div class="q">"AI-focused intelligence hub for the Documentarian community."</div>
+<ul><li>Release AI-focused educational content</li><li>AI industry news &amp; trend coverage</li><li>Strategic global partnerships</li><li>Expand community multi-language globally</li><li>Launch AIDOC Intelligence Hub</li><li>AI Market Reports</li><li>Weekly AI Insights</li><li>AI Trend Monitoring</li><li>Crypto Education</li></ul>
+<div class="ms"><b>Milestone:</b> 5,000+ Holders • Multi-Language Communities • Partnership Network Expansion</div></div>
+
+<div class="card"><div class="n">CHAPTER III</div><h3>The Documentarians</h3><div class="q">"NFT utility, community governance, and merchandise ecosystem launch."</div>
+<ul><li>Launch official AIDOC NFT Collection</li><li>Exclusive holder benefits</li><li>Special community access</li><li>Future ecosystem rewards</li><li>Limited edition collectibles</li><li>Community governance initiatives</li><li>Voting power for holders</li><li>Community-driven direction</li><li>DAO-style participation</li><li>Exclusive Documentarian access</li><li>Merchandise store launch</li><li>AIDOC apparel</li><li>Documentarian collection</li><li>Digital &amp; physical merchandise</li><li>Brand expansion globally</li></ul>
+<div class="ms"><b>Milestone:</b> NFT Sellout • Community Expansion • Global Brand Recognition</div></div>
+
+<div class="card"><div class="n">CHAPTER IV</div><h3>The Intelligence</h3><div class="q">"Artificial Intelligence joins the story."</div>
+<ul><li>AIDOC AI Assistant</li><li>AI Research Assistant</li><li>AI Content Generation</li><li>AI Market Insights</li><li>AI News Interpretation</li></ul>
+<div class="ms"><b>Milestone:</b> Thousands of AI Users • Community-Driven Improvements • Ecosystem Adoption</div></div>
+
+<div class="card"><div class="n">CHAPTER V</div><h3>The Signal</h3><div class="q">"Intelligence becomes actionable."</div>
+<ul><li>AIDOC Trading Intelligence</li><li>AI Signal Engine</li><li>Market Analysis Dashboard</li><li>News Sentiment Analysis</li><li>Indicator-Based Trading Signals</li></ul>
+<div class="ms"><b>Outcome:</b> Better Information • Better Analysis • Better Decisions</div></div>
+
+<div class="card"><div class="n">CHAPTER VI</div><h3>The Future</h3><div class="q">"The documentary never ends."</div>
+<ul><li>AI-Powered Intelligence Network: full AIDOC AI ecosystem with advanced AI agents</li><li>Trading &amp; Research Ecosystem: market analysis, signals, and research tools</li><li>Educational Platform: multi-language global AI learning community</li><li>NFT + Merch Ecosystem: digital &amp; physical brand globally recognized</li><li>Community Governance: community-owned, community-driven future</li><li>Global Expansion: world-stage presence &amp; partner network</li></ul></div>
+
+</div></div></section>
+
+<section id="mission"><div class="wrap mission">
+<div class="label">The Mission</div>
+<h2>We are not building another memecoin. <span>We are documenting humanity's transition into the age of Artificial Intelligence.</span></h2>
+<p>Some see apocalypse. Some see opportunity. We see both.</p>
+<strong>We are the Documentarians. We are $AIDOC.</strong>
+</div></section>
+
+<section id="join"><div class="wrap">
+<div class="label">Join the Documentarians</div>
+<h2>Official Links</h2>
+<div class="ca"><code id="ca">EBc6YWysUJsQJh9UayAiyS5j9voLdJUAVQBxzBNtpump</code><button id="cp" type="button">COPY ADDRESS</button></div>
+<div class="links">
+<a href="https://pump.fun/coin/EBc6YWysUJsQJh9UayAiyS5j9voLdJUAVQBxzBNtpump" target="_blank" rel="noopener">PUMP.FUN</a>
+<a href="https://dexscreener.com/solana/EBc6YWysUJsQJh9UayAiyS5j9voLdJUAVQBxzBNtpump" target="_blank" rel="noopener">DEXSCREENER</a>
+<a href="https://x.com/theaidoc11" target="_blank" rel="noopener">X / TWITTER</a>
+<a href="https://t.me/aidocumentary1" target="_blank" rel="noopener">TELEGRAM</a>
+</div></div></section>
+
+<footer><div class="wrap">THE AIDOC &nbsp;•&nbsp; DOCUMENTING THE AI REVOLUTION
+<p class="risk">$AIDOC is a community memecoin. Nothing on this site is financial advice. Cryptocurrency is volatile and you can lose everything you put in. Do your own research.</p></div></footer>
+
+<script>
+document.getElementById('cp').addEventListener('click',function(){
+  var b=this,t=document.getElementById('ca').textContent;
+  var done=function(){b.textContent='COPIED';setTimeout(function(){b.textContent='COPY ADDRESS'},1800)};
+  if(navigator.clipboard){navigator.clipboard.writeText(t).then(done)}else{var r=document.createRange();r.selectNode(document.getElementById('ca'));getSelection().removeAllRanges();getSelection().addRange(r);document.execCommand('copy');done()}
+});
+</script>
+</body>
+</html>
